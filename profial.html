@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #1e1e2f, #162447, #1f4068, #1b1b2f);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            animation: backgroundShift 10s infinite;
+            transition: background 1s ease; /* Smooth transition for background change */
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ff6f61;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ff6f61;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent), url('https://source.unsplash.com/1600x900/?nature') center/cover;
+            width: 100%;
+            color: #fff;
+            opacity: 0; /* Hide initially */
+            animation: fadeIn 2s ease-in-out forwards; /* Smooth fade-in effect */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 70px 0;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #ff6f61;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .profile h2 {
+            font-size: 2.2rem;
+            margin: 20px 0 10px;
+        }
+
+        .profile p {
+            color: #ccc;
+        }
+
+        .skills {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .skills h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .skills .icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .skills .icons i {
+            font-size: 3rem;
+            transition: transform 0.3s, color 0.3s;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .skills .icons i:hover {
+            transform: scale(1.3);
+            color: #ff6f61;
+        }
+
+        .contact {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .contact h3 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            font-size: 2.5rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .contact a:hover {
+            transform: scale(1.3);
+            color: #ff6f61;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #bbb;
+            background: rgba(0, 0, 0, 0.85);
+            width: 100%;
+        }
+
+        .change-background-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .change-background-btn:hover {
+            background-color: #ff4e4a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">My Profile</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to My prof</h1>
+        <p>Innovation & Excellence Combined</p>
+    </div>
+
+    <section class="profile" id="profile">
+        <img src="https://raw.githubusercontent.com/your-username/your-repository/main/zezo.jpg" alt="Profile Picture">
+        <h2>Aboelyazzed Hatem</h2>
+        <p>Software Engineer | Web developer and desing page</p>
+    </section>
+    
+
+    <section class="skills" id="skills">
+        <h3>My Expertise</h3>
+        <div class="icons">
+            <i class="fab fa-html5" title="HTML5"></i>
+            <i class="fab fa-css3-alt" title="CSS3"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
+            <i class="fab fa-react" title="React"></i>
+            <i class="fab fa-node" title="Node.js"></i>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h3>Reach Out</h3>
+        <a href="https://www.facebook.com/profile.php?id=61557580576345&mibextid=JRoKGi"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/aboalazed-hatem-aa67aa31a?"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/yourphonenumber"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ENG ZEZO.</p>
+    </footer>
+
+    <!-- Button to change background -->
+    <button class="change-background-btn" onclick="changeBackground()">Change Background</button>
+
+    <script>
+        function changeBackground() {
+            const backgrounds = [
+                'linear-gradient(45deg, #1e1e2f, #162447, #1f4068, #1b1b2f)',
+                'linear-gradient(45deg, #ff7e5f, #feb47b)',
+                'linear-gradient(45deg, #00b09b, #96c93d)',
+                'linear-gradient(45deg, #ff6a00, #ff6347)'
+            ];
+
+            // Randomly select a background
+            const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+            // Apply the new background with smooth transition
+            document.body.style.background = randomBackground;
+        }
+    </script>
+
+</body>
+
+</html>
